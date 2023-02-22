@@ -1,3 +1,3 @@
-module golang.org/x/sync
+module github.com/chenyanchen/sync
 
 go 1.18

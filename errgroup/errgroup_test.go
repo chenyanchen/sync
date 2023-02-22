@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/sync/errgroup"
+	"github.com/chenyanchen/sync/errgroup"
 )
 
 var (
@@ -23,8 +23,10 @@ var (
 	Video = fakeSearch("video")
 )
 
-type Result string
-type Search func(ctx context.Context, query string) (Result, error)
+type (
+	Result string
+	Search func(ctx context.Context, query string) (Result, error)
+)
 
 func fakeSearch(kind string) Search {
 	return func(_ context.Context, query string) (Result, error) {
@@ -37,7 +39,7 @@ func fakeSearch(kind string) Search {
 // the sync.WaitGroup example at https://golang.org/pkg/sync/#example_WaitGroup.
 func ExampleGroup_justErrors() {
 	g := new(errgroup.Group)
-	var urls = []string{
+	urls := []string{
 		"http://www.golang.org/",
 		"http://www.google.com/",
 		"http://www.somestupidname.com/",
