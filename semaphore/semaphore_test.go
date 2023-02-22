@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/sync/errgroup"
-	"golang.org/x/sync/semaphore"
+	"github.com/chenyanchen/sync/errgroup"
+	"github.com/chenyanchen/sync/semaphore"
 )
 
 const maxSleep = 1 * time.Millisecond

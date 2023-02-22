@@ -12,7 +12,7 @@ import (
 	"testing"
 	"testing/quick"
 
-	"golang.org/x/sync/syncmap"
+	"github.com/chenyanchen/sync/syncmap"
 )
 
 type mapOp string
